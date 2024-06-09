@@ -1,0 +1,7 @@
+default:  --profile pretty -p html -p json 
+ci:  --profile pretty -p html -p json
+pretty: --no-source --color --format pretty
+progress: --format progress
+
+html: --format pretty --format html --out=reports/relatorio.html
+json: --format json -o "report.json"

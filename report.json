@@ -1,0 +1,378 @@
+[
+  {
+    "id": "api-vrpat",
+    "uri": "features/APIVRPAT.feature",
+    "keyword": "Funcionalidade",
+    "name": "API VRPAT",
+    "description": "",
+    "line": 4,
+    "tags": [
+      {
+        "name": "@api",
+        "line": 3
+      },
+      {
+        "name": "@vr",
+        "line": 3
+      }
+    ],
+    "elements": [
+      {
+        "id": "api-vrpat;verificar-se-o-json-possui-a-chave-\"typeofestablishment\"",
+        "keyword": "Cenário",
+        "name": "Verificar se o JSON possui a chave \"typeOfEstablishment\"",
+        "description": "",
+        "line": 6,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "que faço uma requisição GET para o endpoint de consulta",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/APIVRPAT.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 339623100
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a resposta deve conter a chave \"typeOfEstablishment\"",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/APIVRPAT.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18490800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 3
+          },
+          {
+            "name": "@vr",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154600
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 108300
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46500
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "remover-textos",
+    "uri": "features/RemoverTextos.feature",
+    "keyword": "Funcionalidade",
+    "name": "Remover textos",
+    "description": "",
+    "line": 4,
+    "tags": [
+      {
+        "name": "@removerTexto",
+        "line": 3
+      },
+      {
+        "name": "@vr",
+        "line": 3
+      }
+    ],
+    "elements": [
+      {
+        "id": "remover-textos;;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "",
+        "description": "",
+        "line": 13,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "a string de entrada \"bananas, tomates # e ventiladores\"",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/RemoverTextos.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27800
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "remover os marcadores \"['#', '!']\"",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/RemoverTextos.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16300
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a saída esperada é: \"bananas, tomates\"",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/RemoverTextos.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10867900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@removerTexto",
+            "line": 3
+          },
+          {
+            "name": "@vr",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23600
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25100
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37000
+            }
+          }
+        ]
+      },
+      {
+        "id": "remover-textos;;;3",
+        "keyword": "Esquema do Cenário",
+        "name": "",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "a string de entrada \"o rato roeu a roupa $ do rei % de roma\"",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/RemoverTextos.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27500
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "remover os marcadores \"['%', '!']\"",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/RemoverTextos.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a saída esperada é: \"o rato roeu a roupa $ do rei\"",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/RemoverTextos.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47300
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@removerTexto",
+            "line": 3
+          },
+          {
+            "name": "@vr",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25600
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63700
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17900
+            }
+          }
+        ]
+      },
+      {
+        "id": "remover-textos;;;4",
+        "keyword": "Esquema do Cenário",
+        "name": "",
+        "description": "",
+        "line": 15,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "a string de entrada \"the quick brown fox & jumped over * the lazy dog\"",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/RemoverTextos.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50200
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "remover os marcadores \"['&', '*', '%', '!']\"",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/RemoverTextos.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40400
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a saída esperada é: \"the quick brown fox\"",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/RemoverTextos.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64300
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@removerTexto",
+            "line": 3
+          },
+          {
+            "name": "@vr",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 175400
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25700
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
